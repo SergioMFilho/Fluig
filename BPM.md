@@ -1,4 +1,4 @@
-Criando um diagrama Fluig:
+##  Criando um diagrama Fluig:
 	![[Pasted image 20230130100354.png]]![[Pasted image 20230130100445.png]]![[layoutFluig.png]]
 	Vermelho: Diagramas criados
 	Rosio: Diagrama para edição e consulta

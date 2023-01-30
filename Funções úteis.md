@@ -1,4 +1,5 @@
-Validação de CPF:
+##  Validação de CPF:
+```
 function is_cpf(cpf) {
 
   cpf = cpf.split('.').join('');
@@ -54,8 +55,9 @@ function is_cpf(cpf) {
   }
 
   return true;
-
-Validação de CNPJ:
+```
+##  Validação de CNPJ:
+```
 function is_cnpj(cnpj) {
 
   cnpj = cnpj.split('.').join('');
@@ -120,8 +122,9 @@ function is_cnpj(cnpj) {
   }
   return true;
 }
-
-Validação de CEP:
+```
+##  Validação de CEP:
+```
 async function is_cep(cep) {
   //arruma formatação cep para consulta
   cep = cep.split('-').join('');
@@ -151,3 +154,4 @@ Validação de campos vazios:
 function isEmpty(item) {
   return item == "" || item == undefined || item == null
 }
+```
