@@ -12,6 +12,7 @@ O projeto inserido neste repositório é um modelo pré-existente e é utilizado
 
 <p display="inline-block">
   <img width="48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="vscode-logo"/>
+  <img width="48" src="https://www.eclipse.org/downloads/assets/public/images/logo-eclipse.png" alt="eclipse-logo"/>
   <img width="60" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7SlZDvsvoXpJI7IEw-697fQ7go5FxBMLX3wPha-k_Eg&s" alt="rider-logo"/>
 </p>
 
