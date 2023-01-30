@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "db966e65cb5edfa0",
+    "type": "split",
+    "children": [
+      {
+        "id": "c84c3a31aeb0f281",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9d217285cefe85f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Funções úteis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "13aae645606f6e14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Funções úteis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1b271cf2d03eab73",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "FAQ.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06d8e5568cce8a16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Style guide.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d637ddbf7d293a81",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "imagens/Pasted image 20230130100354.png"
+              }
+            }
+          },
+          {
+            "id": "ac1a9d4603440a2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Funções úteis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e185ea3d47e2c820",
+    "type": "split",
+    "children": [
+      {
+        "id": "f4465d1963f98644",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8bab6a51f7df8dde",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "76f3ddbd3350ae51",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1694f5affe2e755b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d049e23d96b9dcfe",
+    "type": "split",
+    "children": [
+      {
+        "id": "a070f18630777d04",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c207b0c2b3d972e2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Funções úteis.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7efcd6d65d428985",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Funções úteis.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9a3ef898d86b00a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2da4d139cd9ecc3d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Funções úteis.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ac1a9d4603440a2c",
+  "lastOpenFiles": [
+    "BPM.md",
+    "FAQ.md",
+    "Style guide.md",
+    "Máscaras úteis.md",
+    "Funções úteis.md",
+    "imagens/Pasted image 20230130100445.png",
+    "imagens/Pasted image 20230130100354.png"
+  ]
+}
