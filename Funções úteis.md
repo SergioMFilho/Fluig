@@ -155,3 +155,7 @@ function isEmpty(item) {
   return item == "" || item == undefined || item == null
 }
 ```
+##  Mostrar todos os Campos Ocultos:
+```
+$("[style*='display: none']").show()
+```
