@@ -14,3 +14,5 @@
 
         Porém, no local de "error", caso o THROW esteja localizado fora de um catch de erro, será colocado "success" no seu lugar
     • chamar dataset no servicetask onde funcionava o script de e-mail
+    • Caso não tenha acesso a algum campo que obtenha o valor do e-mail, é possível acessá-lo através do collegueId  
+    
