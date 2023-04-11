@@ -16,6 +16,8 @@ O projeto inserido neste repositório é um modelo pré-existente e é utilizado
   <img width="60" height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7SlZDvsvoXpJI7IEw-697fQ7go5FxBMLX3wPha-k_Eg&s" alt="rider-logo"/>
 </p>
 
+Acesso a Wiki de navegação: <a>https://github.com/StrategiConsultoria/FluigDocumentation/wiki</a>
+
 ## References
 [About issues - GitHub Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 
