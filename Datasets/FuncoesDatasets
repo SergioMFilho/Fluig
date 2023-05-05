@@ -1,0 +1,6 @@
+##  Funções para Datasets
+
+Retornando todos os datasets
+```
+var datasets = DatasetFactory.getAvailableDatasets();
+```
