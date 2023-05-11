@@ -1,0 +1,136 @@
+## Na criação de datasets o fluig nos da 4 funções
+
+Com essas funções é possível realizar a sincronização dos datasets criados.
+
+defineStructure - Irá definir a estrutura do nosso dataset e irá setar uma chave primária
+```
+function defineStructure() {
+    addColumn("CODCOLIGADA");
+    addColumn("IDMOV");
+    addColumn("HISTORICO");
+    addColumn("PASSAGEIRO");
+    addColumn("CADASTRANTE");
+    addColumn("SOLICITANTE");
+    addColumn("AUTORIZANTE");
+    setKey(["CODCOLIGADA"]);
+}();
+```
+onSync - É chamado quando se coloca o fluig para sincronizar o dataset
+```
+function onSync(lastSyncDate) {
+
+
+    var dataset = DatasetBuilder.newDataset();
+    var newerDataset = createDataset();
+    var olderDataset = DatasetFactory.getDataset("dsProcessoViagemTMOV", null, null, null);
+
+    var ifNull = function (value, ifNullValue) {
+        return value == null || value == "" ? ifNullValue : value;
+    }
+
+    if (newerDataset != null) {
+        var updated = [];
+
+        for (var i = 0; i < newerDataset.rowsCount; i++) {
+            dataset.addOrUpdateRow([
+                ifNull(newerDataset.getValue(i, "CODCOLIGADA"), ""),
+                ifNull(newerDataset.getValue(i, "IDMOV"), ""),
+                ifNull(newerDataset.getValue(i, "HISTORICO"), ""),
+                ifNull(newerDataset.getValue(i, "PASSAGEIRO"), ""),
+                ifNull(newerDataset.getValue(i, "CADASTRANTE"), ""),
+                ifNull(newerDataset.getValue(i, "SOLICITANTE"), ""),
+                ifNull(newerDataset.getValue(i, "AUTORIZANTE"), "")
+            ]);
+            updated.push(newerDataset.getValue(i, "CODCOLIGADA"));
+        }
+
+        if (olderDataset != null) {
+            for (var i = 0; i < olderDataset.rowsCount; i++) {
+                if (updated.indexOf(olderDataset.getValue(i, "CODCOLIGADA") == -1)) {
+                    dataset.deleteRow([
+                        ifNull(olderDataset.getValue(i, "CODCOLIGADA"), ""),
+                        ifNull(olderDataset.getValue(i, "IDMOV"), ""),
+                        ifNull(olderDataset.getValue(i, "HISTORICO"), ""),
+                        ifNull(olderDataset.getValue(i, "PASSAGEIRO"), ""),
+                        ifNull(olderDataset.getValue(i, "CADASTRANTE"), ""),
+                        ifNull(olderDataset.getValue(i, "SOLICITANTE"), ""),
+                        ifNull(olderDataset.getValue(i, "AUTORIZANTE"), "")
+                    ]);
+                }
+            }
+        }
+    }
+
+    return dataset;
+
+}
+```
+createDataset - Cria o Dataset para consulta, recebe como parâmetros os campos, as contraints e a ordenação.
+```
+function createDataset(fields, constraints, sortFields) {
+    try {
+        var result;
+        var dataset = DatasetBuilder.newDataset();
+        dataset.addColumn("CODCOLIGADA");
+        dataset.addColumn("IDMOV");
+        dataset.addColumn("HISTORICO");
+        dataset.addColumn("PASSAGEIRO");
+        dataset.addColumn("CADASTRANTE");
+        dataset.addColumn("SOLICITANTE");
+        dataset.addColumn("AUTORIZANTE");
+
+        var IDMOV = 987788;
+
+        var endpoint = '/api/framework/v1/consultaSQLServer/RealizaConsulta/WSDiariaTMOV/21/T?parameters=IDMOV=' + IDMOV;
+        var clientService = fluigAPI.getAuthorizeClientService();
+        var data = {
+            companyId: 1 + '',
+            serviceCode: 'RM_WSDATASERVER_REST',
+            endpoint: endpoint + '',
+            method: 'get',
+            timeoutService: '100',
+            options: {
+                encoding: 'UTF-8',
+                mediaType: 'application/json'
+            },
+            headers: {},
+            params: {}
+        }
+
+        try {
+            result = clientService.invoke(JSON.stringify(data));
+        } catch (e) {
+            throw "dsProcessoViagemTMOV => Não se conectou ao endpoint REST do RM: " + e + "";
+        }
+
+        result = JSON.parse(result.getResult())
+
+        if (result.length > 0) {
+            for (var i = 0; i < result.length; i++) {
+                var item = result[i];
+                dataset.addRow(new Array(
+                    item.CODCOLIGADA.toString(),
+                    item.IDMOV.toString(),
+                    item.HISTORICO.toString(),
+                    item.PASSAGEIRO.toString(),
+                    item.CADASTRANTE.toString(),
+                    item.SOLICITANTE.toString(),
+                    item.AUTORIZANTE.toString()
+                ));
+            }
+        } else {
+            throw "dsProcessoViagemTMOV =======> Não existem dados"
+        }
+
+        return dataset
+    } catch(e) {
+        throw "dsProcessoViagemTMOV ======> Ocorreu um erro ao iniciar a criação do dataset: " + e + "";
+    }
+}
+```
+onMobileSync - Essa função é específica para o uso de datasets em aplicativos móveis. Ela permite que você sincronize dados entre o aplicativo móvel e o servidor do Fluig. 
+```
+function onMobileSync(user) {
+
+}
+```
