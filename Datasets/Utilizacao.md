@@ -24,3 +24,7 @@ Na variável DATASET está o comando completo que será usado
 ```
 var dataset = DatasetFactory.getDataset(tabela, returnFields(campos retornados), constraints(c1), null(ordenação))
 ```
+Para utilizar o datasetFactory no front é necessário utilizar a seguinte importação
+```
+<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
+```
