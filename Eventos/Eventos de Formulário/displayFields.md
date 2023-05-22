@@ -17,7 +17,15 @@ form.setVisibleById('txtReqJustificativa', true);   Visível
 form.setVisibleById('txtReqContrato', false);   Não Visível
 }
 ```
-Também é possível colocar algumas ações, como por exemplo começar a página com o collapse aberto
+É possível utilizar o javascript dentro do displayFields e para isso se utiliza o customHTML
+```
+    if (activity == 10) {
+        customHTML.append("<script>");
+        customHTML.append("function teste() { return 'teste' };");
+        customHTML.append("</script>");
+    }
+```
+Outro exemplo do uso do javaScript 
 ```
     if (activity == 18) {
         customHTML.append("<script>");
