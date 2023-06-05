@@ -11,4 +11,4 @@ _documentacao]:checked").val();```
 
 * libs ou scripts que são utilizados com mais frequencia podem ser encontrados no widget repositorio (nomeado de libs no fluig)
 * para importar por lá você precisa adicionar a lib em seu local (css salva em wcm/widget/libs/src/main/webapp/resources/css e js em wcm/widget/libs/src/main/webapp/resources/js/libs)
-* para importar no html você faz (<script src="/libs/resources/js/libs/imask.js"></script> ou <link rel="stylesheet" href="/libs/resources/css/select2.min.css">)
+* para importar no html você faz `<script src="/libs/resources/js/libs/imask.js"></script>` ou `<link rel="stylesheet" href="/libs/resources/css/select2.min.css">`)
