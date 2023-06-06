@@ -1,0 +1,3 @@
+O formController é o objeto que realiza a comunicação entre o formulário e a customização dos eventos. Esse objeto está disponível em cada um dos eventos de customização de formulários através da variável form recebida via parâmetro do evento. 
+
+Este objeto permite alterar os valores dos campos de um registro de formulário e também obter o estado de edição deles, por exemplo: se o usuário está visualizando ou editando o registro de formulário. 
